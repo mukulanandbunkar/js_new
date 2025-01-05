@@ -3,7 +3,7 @@ const fn = (isResolve) => {
     if (isResolve) {
       setTimeout(() => {
         return resolve("fn resolved");
-      }, 5000);
+      }, 3000);
     } else {
       return reject(new Error("fn rejecteed"));
     }
@@ -17,7 +17,7 @@ const fn1 = (isResolve) => {
     if (isResolve) {
       setTimeout(() => {
         return resolve("fn1 resolved");
-      }, 5000);
+      }, 2000);
     } else {
       return reject(new Error("fn1 rejected"));
     }

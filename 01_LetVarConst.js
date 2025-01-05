@@ -77,7 +77,7 @@ console.log("AFTER BLOCK & FUNCTION (C): ", c); // AFTER BLOCK & FUNCTION (C):  
           - these variable show the shadowing inside the function and block so override the value within in function & block without affecting
             the value of global scope
           - we can't redeclare the variable with let and const in same scope  
-     */
+*/
 
 let x = 10;
 const y = 89;

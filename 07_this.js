@@ -195,7 +195,7 @@ const user33 = {
     return `Hello, ${this.name}!`;
   },
   farewell: () => {
-    return `Goodbye, ${(this, name)}!`;
+    return `Goodbye, ${this.name}!`;
   },
 };
 console.log(user33.greet()); // What is logged?  // Hello Mukul!
@@ -242,12 +242,12 @@ function callback1() {
 }
 const object1 = {
   length: 10,
-  method() {
+  method(...args) {
     // argument : {[callback1, 2,3], length: 3}
-    arguments[0]();
+    args[0]();
   },
 };
-object.method(callback1, 2, 3); // 3
+object1.method(callback1, 2, 3); // 3
 /**
  * since we are refernecing to argument object array this time length of array will print
  */
@@ -267,25 +267,23 @@ const calc = {
 const result = calc.add(10).multiply(1000).add(99);
 console.log(result.total);
 
+// usind=g  class constructor
 
-// usind=g  class constructor 
+class Operation {
+  constructor() {
+    this.total = 0;
+  }
+  add(a) {
+    this.total += a;
+    return this;
+  }
+  multiply(a) {
+    this.total *= a;
+    return this;
+  }
+}
 
+const op = new Operation();
 
-class operation {
-   constructor() {
-       this.total = 0
-   }
-   add(a) {
-     this.total += a;
-     return this;
-   }
-   multiply(a) {
-     this.total *= a;
-     return this;
-   }
- };
- 
- const op = new operation()
-
- const res = op.add(10).multiply(1000).add(99);
+const res = op.add(10).multiply(1000).add(99);
 console.log(res.total);

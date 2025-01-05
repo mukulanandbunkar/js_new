@@ -32,8 +32,8 @@
 
 
 
-    * What is forst class function
-       -first class funtion is th function in which we can pass another function as a variable 
+    * What is first class function
+       - first class funtion is th function in which we can pass another function as a variable 
        - the function which is passed can  be act as a varable for the function in which it pass
        - we can manipulate the value with the help of function passed
        - the parent function in which another funtion is passed is first class function

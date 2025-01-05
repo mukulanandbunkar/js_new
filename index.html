@@ -8,13 +8,16 @@
   <body>
     <h1 id="header"></h1>
     <h1 id="currying"></h1>
-    <div id="scroll-container" style="max-height: 100vh; overflow: auto;">
+    <div>
+      <div id="indicator" style="height: 10px; background: green; transition: all 1s;"></div>
+    </div>
+    <div id="scroll-container" style="max-height: calc(100vh - 120px); overflow: auto">
       <div id="scroll" style="height: 200vh; background: red"></div>
     </div>
     <button onclick="scrollToTop()">onTop</button>
     <button onclick="scrollToBottom()">onBottom</button>
-    <!-- <script src="./letVarConst.js"></script>
-    <script src="./scroll.js"></script> -->
-    <script src="./revision.js"></script>
+    <!-- <script src="./letVarConst.js"></script> -->
+    <script src="./15_polyfill.js"></script>
+    <!-- <script src="./hoiting.js"></script> -->
   </body>
 </html>
